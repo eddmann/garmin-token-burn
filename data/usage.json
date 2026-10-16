@@ -1,0 +1,130 @@
+{
+  "version": 2,
+  "updated": 1785412800,
+  "face": [
+    0,
+    1
+  ],
+  "providers": [
+    {
+      "id": "claude",
+      "name": "Claude",
+      "short": "CC",
+      "color": 16733440,
+      "plan": "Max 20x",
+      "windows": [
+        {
+          "label": "Session",
+          "pct": 62,
+          "resets_min": 269,
+          "pace_pct": 10
+        },
+        {
+          "label": "Weekly",
+          "pct": 41,
+          "resets_min": 3599,
+          "pace_pct": 64
+        },
+        {
+          "label": "Fable only",
+          "pct": 12,
+          "resets_min": 3599,
+          "pace_pct": 64
+        }
+      ],
+      "credits": null,
+      "status": null,
+      "error": null,
+      "today_tokens": 4200000,
+      "today_cost_usd": 38.2,
+      "yesterday_tokens": 3030000,
+      "yesterday_cost_usd": 27.8,
+      "last30_tokens": 96500000,
+      "last30_cost_usd": 823.1,
+      "week_tokens": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        3030000,
+        4200000
+      ],
+      "pr": true,
+      "streak": 2,
+      "alert": false
+    },
+    {
+      "id": "codex",
+      "name": "Codex",
+      "short": "CX",
+      "color": 43775,
+      "plan": "Pro 20x",
+      "windows": [
+        {
+          "label": "Weekly",
+          "pct": 55,
+          "resets_min": 5580,
+          "pace_pct": 45
+        }
+      ],
+      "credits": "62.5K credits",
+      "status": null,
+      "error": null,
+      "today_tokens": 810000,
+      "today_cost_usd": 6.1,
+      "yesterday_tokens": 0,
+      "yesterday_cost_usd": 0,
+      "last30_tokens": 21400000,
+      "last30_cost_usd": 154.7,
+      "week_tokens": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        810000
+      ],
+      "pr": false,
+      "streak": 1,
+      "alert": false
+    },
+    {
+      "id": "cursor",
+      "name": "Cursor",
+      "short": "CU",
+      "color": 11141375,
+      "plan": "Pro",
+      "windows": [
+        {
+          "label": "Monthly",
+          "pct": 4,
+          "resets_min": 36158,
+          "pace_pct": 16
+        }
+      ],
+      "credits": null,
+      "status": null,
+      "error": null,
+      "today_tokens": null,
+      "today_cost_usd": null,
+      "yesterday_tokens": null,
+      "yesterday_cost_usd": null,
+      "last30_tokens": null,
+      "last30_cost_usd": null,
+      "week_tokens": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "pr": false,
+      "streak": 0,
+      "alert": false
+    }
+  ]
+}

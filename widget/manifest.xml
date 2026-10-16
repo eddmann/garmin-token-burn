@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<iq:manifest xmlns:iq="http://www.garmin.com/xml/connectiq" version="3">
+    <iq:application id="8e93c27a769d4c52bd3f44b2e8919ddd"
+                    type="watch-app"
+                    name="@Strings.AppName"
+                    entry="TokenBurnApp"
+                    launcherIcon="@Drawables.LauncherIcon"
+                    minApiLevel="3.3.0">
+        <iq:products>
+            <iq:product id="fr255"/>
+            <iq:product id="fr255m"/>
+            <iq:product id="fr255s"/>
+            <iq:product id="fr255sm"/>
+        </iq:products>
+        <iq:permissions>
+            <iq:uses-permission id="Communications"/>
+            <iq:uses-permission id="Background"/>
+            <iq:uses-permission id="ComplicationPublisher"/>
+            <iq:uses-permission id="Notifications"/>
+        </iq:permissions>
+        <iq:languages>
+            <iq:language>eng</iq:language>
+        </iq:languages>
+        <iq:barrels/>
+    </iq:application>
+</iq:manifest>

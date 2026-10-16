@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<complications>
+    <complication id="0" access="public" icon="@Drawables.ComplicationIcon"
+                  longLabel="@Strings.ComplicationLabel" shortLabel="@Strings.ComplicationShortLabel"
+                  units="@Strings.ComplicationUnits">
+        <faceIt defaultText="--"/>
+    </complication>
+</complications>

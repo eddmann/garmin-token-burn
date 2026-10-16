@@ -1,0 +1,9 @@
+{
+  "alertPct": 90,
+  "show": ["claude", "codex"],
+  "face": ["claude", "codex"],
+  "providers": {
+    "claude": {"short": "CC"},
+    "codex": {"short": "CX"}
+  }
+}

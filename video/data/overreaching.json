@@ -1,0 +1,94 @@
+{
+  "version": 2,
+  "updated": 1785412800,
+  "face": [
+    0,
+    1
+  ],
+  "providers": [
+    {
+      "id": "claude",
+      "name": "Claude",
+      "short": "CC",
+      "color": 16733440,
+      "plan": "Max 20x",
+      "windows": [
+        {
+          "label": "Session",
+          "pct": 92,
+          "resets_min": 105,
+          "pace_pct": 40
+        },
+        {
+          "label": "Weekly",
+          "pct": 71,
+          "resets_min": 4031,
+          "pace_pct": 60
+        },
+        {
+          "label": "Fable only",
+          "pct": 30,
+          "resets_min": 4031,
+          "pace_pct": 60
+        }
+      ],
+      "credits": null,
+      "status": null,
+      "error": null,
+      "today_tokens": 3200000000,
+      "today_cost_usd": 1140,
+      "yesterday_tokens": 2400000000,
+      "yesterday_cost_usd": 860,
+      "last30_tokens": 42800000000,
+      "last30_cost_usd": 15300,
+      "week_tokens": [
+        1400000000,
+        1600000000,
+        1900000000,
+        2100000000,
+        2400000000,
+        2400000000,
+        3200000000
+      ],
+      "alert": true,
+      "pr": true,
+      "streak": 47
+    },
+    {
+      "id": "codex",
+      "name": "Codex",
+      "short": "CX",
+      "color": 43775,
+      "plan": "Pro 20x",
+      "windows": [
+        {
+          "label": "Weekly",
+          "pct": 64,
+          "resets_min": 5580,
+          "pace_pct": 70
+        }
+      ],
+      "credits": "62.5K credits",
+      "status": null,
+      "error": null,
+      "today_tokens": 640000000,
+      "today_cost_usd": 130,
+      "yesterday_tokens": 520000000,
+      "yesterday_cost_usd": 105,
+      "last30_tokens": 9600000000,
+      "last30_cost_usd": 1920,
+      "week_tokens": [
+        280000000,
+        300000000,
+        330000000,
+        360000000,
+        420000000,
+        520000000,
+        640000000
+      ],
+      "alert": false,
+      "pr": false,
+      "streak": 47
+    }
+  ]
+}

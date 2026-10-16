@@ -1,0 +1,88 @@
+{
+  "version": 2,
+  "updated": 1785412800,
+  "face": [
+    0,
+    1
+  ],
+  "providers": [
+    {
+      "id": "claude",
+      "name": "Claude",
+      "short": "CC",
+      "color": 16733440,
+      "plan": "Max 20x",
+      "windows": [
+        {
+          "label": "Session",
+          "pct": 0,
+          "resets_min": 0,
+          "pace_pct": 100
+        },
+        {
+          "label": "Weekly",
+          "pct": 3,
+          "resets_min": 2900,
+          "pace_pct": 71
+        }
+      ],
+      "credits": null,
+      "status": null,
+      "error": null,
+      "today_tokens": 0,
+      "today_cost_usd": 0,
+      "yesterday_tokens": 0,
+      "yesterday_cost_usd": 0,
+      "last30_tokens": 1600000000,
+      "last30_cost_usd": 13900,
+      "week_tokens": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "alert": false,
+      "pr": false,
+      "streak": 0
+    },
+    {
+      "id": "codex",
+      "name": "Codex",
+      "short": "CX",
+      "color": 43775,
+      "plan": "Pro 20x",
+      "windows": [
+        {
+          "label": "Weekly",
+          "pct": 38,
+          "resets_min": 5580,
+          "pace_pct": 45
+        }
+      ],
+      "credits": "62.5K credits",
+      "status": null,
+      "error": null,
+      "today_tokens": 12000000,
+      "today_cost_usd": 9.8,
+      "yesterday_tokens": 20000000,
+      "yesterday_cost_usd": 15.1,
+      "last30_tokens": 300000000,
+      "last30_cost_usd": 240,
+      "week_tokens": [
+        5000000,
+        8000000,
+        9000000,
+        7000000,
+        11000000,
+        20000000,
+        12000000
+      ],
+      "alert": false,
+      "pr": false,
+      "streak": 12
+    }
+  ]
+}
