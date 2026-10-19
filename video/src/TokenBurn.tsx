@@ -1,4 +1,4 @@
-import { AbsoluteFill, Img, Sequence, continueRender, delayRender, interpolate, random, spring, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
+import { AbsoluteFill, Img, OffthreadVideo, Sequence, continueRender, delayRender, interpolate, random, spring, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
 import { Audio } from "@remotion/media";
 import { CAPTIONS } from "./captions";
 
@@ -48,6 +48,15 @@ const Still: React.FC<{ src: string; from?: number; to?: number; drift?: number;
     </AbsoluteFill>
   );
 };
+
+// Real footage, cut and framed to the scene length by prepare-stock.py.
+// Source audio is muted so the original narration and music carry the edit.
+const StockShot: React.FC<{ src: string; dim?: number }> = ({ src, dim = 0 }) => (
+  <AbsoluteFill style={{ backgroundColor: "black" }}>
+    <OffthreadVideo src={staticFile(`stock/${src}.mp4`)} muted style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+    <AbsoluteFill style={{ background: `linear-gradient(to bottom, rgba(0,0,0,${dim}) 45%, rgba(0,0,0,${Math.min(dim + 0.3, 0.65)}) 100%)` }} />
+  </AbsoluteFill>
+);
 
 // A watch screen capture clipped to a circle, with a little glass glare.
 const Screen: React.FC<{ watch: string; size: number; shake?: boolean }> = ({ watch, size, shake }) => {
@@ -195,11 +204,15 @@ const musicVolume = (f: number) => {
   return interpolate(duck, [0, 1], [0.9, 0.2]);
 };
 
-export const TokenBurn = () => (
+export const TokenBurn = ({ stockFootage = false }: { stockFootage?: boolean }) => (
   <AbsoluteFill style={{ backgroundColor: "black" }}>
     <Audio src={staticFile("music/track.wav")} volume={musicVolume} />
 
-    <Scene at={0} to={5.8}><Still src="runner-dawn" drift={50} /><Particles kind="dust" count={40} seed="dawn" /></Scene>
+    <Scene at={0} to={5.8}>
+      {stockFootage ? <StockShot src="runner" dim={0.08} /> : (
+        <><Still src="runner-dawn" drift={50} /><Particles kind="dust" count={40} seed="dawn" /></>
+      )}
+    </Scene>
     <Scene at={5.8} to={10}>
       <Still src="wrist-dawn" from={1.0} to={1.08} drift={30} shakeAt={s(1)}>
         <Sequence durationInFrames={s(1)} layout="none"><OnWrist shot="wrist-dawn" watch="face" /></Sequence>
@@ -207,10 +220,13 @@ export const TokenBurn = () => (
       </Still>
     </Scene>
     <Scene at={10} to={15.2}>
-      <Still src="typing" dim={0.25} drift={-70} />
+      {stockFootage ? <StockShot src="typing" dim={0.12} /> : <Still src="typing" dim={0.25} drift={-70} />}
       <Sequence from={s(0.8)} layout="none"><Watch watch="status" x={500} y={230} /></Sequence>
     </Scene>
-    <Scene at={15.2} to={17.4}><Still src="finish-line" from={1.12} to={1.0} drift={40} /><Particles kind="confetti" count={70} seed="finish" /></Scene>
+    <Scene at={15.2} to={17.4}>
+      {stockFootage ? <StockShot src="finish" dim={0.04} /> : <Still src="finish-line" from={1.12} to={1.0} drift={40} />}
+      <Particles kind="confetti" count={70} seed="finish" />
+    </Scene>
     <Scene at={17.4} to={21.2}>
       <Still src="wrist-finish" from={1.0} to={1.06} drift={-30} shakeAt={0}>
         <Sequence durationInFrames={s(1.5)} layout="none"><OnWrist shot="wrist-finish" watch="notif-pr" shake /></Sequence>
@@ -219,15 +235,16 @@ export const TokenBurn = () => (
       <Particles kind="confetti" count={45} seed="pr" />
     </Scene>
     <Scene at={21.2} to={24.6}>
-      <Still src="sofa" dim={0.2} drift={50} />
-      <Particles kind="dust" count={30} seed="sofa" />
+      {stockFootage ? <StockShot src="sofa" dim={0.1} /> : (
+        <><Still src="sofa" dim={0.2} drift={50} /><Particles kind="dust" count={30} seed="sofa" /></>
+      )}
       <Sequence from={s(0.6)} layout="none"><Watch watch="claude" x={60} y={250} /></Sequence>
     </Scene>
     <Scene at={24.6} to={29.2}>
-      <Still src="coach" dim={0.2} drift={-60} />
-      <Sequence from={s(0.6)} layout="none"><Watch watch="history" x={500} y={230} /></Sequence>
+      {stockFootage ? <StockShot src="developer" dim={0.06} /> : <Still src="coach" dim={0.2} drift={-60} />}
+      <Sequence from={s(0.6)} layout="none"><Watch watch="history" x={stockFootage ? 60 : 500} y={230} /></Sequence>
     </Scene>
-    <Scene at={29.2} to={30.6}><Still src="beach" drift={60} /></Scene>
+    <Scene at={29.2} to={30.6}>{stockFootage ? <StockShot src="beach" /> : <Still src="beach" drift={60} />}</Scene>
     <Scene at={30.6} to={33.6}>
       <Still src="wrist-beach" from={1.0} to={1.1} drift={20}><OnWrist shot="wrist-beach" watch="detraining" /></Still>
     </Scene>
@@ -236,3 +253,5 @@ export const TokenBurn = () => (
     {VOICE.map(([vo, at, , until]) => <Line key={vo} at={at} vo={vo} until={until} />)}
   </AbsoluteFill>
 );
+
+export const TokenBurnStock = () => <TokenBurn stockFootage />;

@@ -73,6 +73,17 @@ clean/toolchain: clean ## Remove the downloaded SDK and the signing key
 video: _require_npm _require_ffmpeg ## Render the parody advert into docs/media/video
 	@video/render.sh
 
+video/stock: _require_npm _require_ffmpeg ## Render the stock-footage cut into docs/media/video
+	@video/render.sh TokenBurnStock
+
+video/stock-assets: _require_ffmpeg ## Download and prepare the stock clips (not needed to render)
+	@python3 video/prepare-stock.py
+
+video/check: _require_npm _require_ffmpeg ## Type-check the edit and check the 40-second music bed
+	@cd video && npm ci --no-audit --no-fund --loglevel=error && npx tsc --noEmit
+	@video/make-track.sh
+	@python3 video/check-track.py
+
 _simulate:
 	@$(SDK_DIR)/bin/connectiq &
 	@sleep 5

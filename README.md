@@ -13,7 +13,7 @@ It is [CodexBar](https://github.com/steipete/CodexBar) on a Garmin Forerunner 25
 
 https://github.com/user-attachments/assets/d3539ccf-26ec-47a2-bc74-804d55a174c4
 
-<p align="center"><em>The advert, 40 seconds: <a href="docs/media/video/token-burn.mp4">download the MP4</a>.</em></p>
+<p align="center"><em>The advert, 40 seconds: <a href="docs/media/video/token-burn.mp4">original cut</a> · <a href="docs/media/video/token-burn-stock.mp4">stock-footage cut</a> · <a href="video/README.md">how the film is made</a>.</em></p>
 
 <p align="center">
   <img src="docs/media/screenshots/face.png" width="180" alt="Token Burn Face: the time with the date above and a flame at 12, framed by thin Claude and Codex gauges, with CC 62% and CX 55% below" />
@@ -52,4 +52,5 @@ make can-release
 
 Plan usage comes from [CodexBar](https://github.com/steipete/CodexBar) by Peter Steinberger.
 Token Burn is released under the [MIT licence](LICENSE).
+Film assets retain the licences and credits listed in [video/CREDITS.md](video/CREDITS.md).
 It is not affiliated with or endorsed by CodexBar, Garmin or any provider it shows.

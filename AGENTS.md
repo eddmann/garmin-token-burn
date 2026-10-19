@@ -3,7 +3,7 @@
 - `shared/`: storage, background fetch, gauges, burn status, settings and icon, compiled into both apps.
 - `publisher/`: `publish-usage.sh` and `snapshot.jq`, which turn CodexBar's dashboard, usage and cost output into `data/usage.json`, the `token-burn.json` config, and fixtures and tests.
 - `scripts/`: SDK download and device file generation for `make deps`.
-- `video/`: the parody advert as a Remotion project, rendered into `docs/media/video` by `make video`.
+- `video/`: the parody advert as a shared Remotion project: `make video` for the original stills cut, `make video/stock` for the stock cut, and `make video/check` for film checks. Prepared stock takes and their source/edit manifest are committed; raw downloads and render intermediates stay ignored in `video/out/`.
 - `docs/`: guides, indexed in `docs/README.md`.
 
 Keep changes focused and as simple as possible: no gold plating, over-architecting, over-engineering or over-testing.
