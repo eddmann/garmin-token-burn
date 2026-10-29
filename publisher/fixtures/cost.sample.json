@@ -1,0 +1,21 @@
+[
+  {
+    "provider": "claude",
+    "source": "local",
+    "last30DaysTokens": 96500000,
+    "last30DaysCostUSD": 823.1,
+    "daily": [
+      {"date": "2026-07-29", "inputTokens": 1200000, "outputTokens": 240000, "cacheReadTokens": 1500000, "totalTokens": 3030000, "totalCost": 27.8},
+      {"date": "2026-07-30", "inputTokens": 1900000, "outputTokens": 310000, "cacheReadTokens": 1900000, "totalTokens": 4200000, "totalCost": 38.2}
+    ]
+  },
+  {
+    "provider": "codex",
+    "source": "local",
+    "last30DaysTokens": 21400000,
+    "last30DaysCostUSD": 154.7,
+    "daily": [
+      {"date": "2026-07-30", "inputTokens": 610000, "outputTokens": 120000, "cacheReadTokens": 80000, "totalTokens": 810000, "totalCost": 6.1}
+    ]
+  }
+]

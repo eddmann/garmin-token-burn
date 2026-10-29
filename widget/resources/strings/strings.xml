@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<strings>
+    <string id="AppName">Token Burn</string>
+    <string id="ComplicationLabel">Limit used</string>
+    <string id="ComplicationShortLabel">BURN</string>
+    <string id="ComplicationUnits">%</string>
+    <string id="SettingDataUrl">Usage JSON URL</string>
+</strings>

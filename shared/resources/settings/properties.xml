@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+    <property id="dataUrl" type="string">https://raw.githubusercontent.com/eddmann/garmin-token-burn/main/data/usage.json</property>
+</properties>

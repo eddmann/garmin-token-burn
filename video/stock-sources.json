@@ -1,0 +1,44 @@
+[
+  {
+    "name": "runner",
+    "page": "https://www.pexels.com/video/back-view-of-a-man-running-on-the-beach-at-sunrise-14458142/",
+    "creator": "Matthias Groeneveld",
+    "download": "https://videos.pexels.com/video-files/14458142/14458142-hd_1920_1080_24fps.mp4",
+    "start": 2, "duration": 5.8, "crop_x": 0.62, "crop_y": 0.5
+  },
+  {
+    "name": "typing",
+    "page": "https://www.pexels.com/video/close-up-video-of-a-hands-typing-on-keyboard-6964012/",
+    "creator": "Mikhail Nilov",
+    "download": "https://videos.pexels.com/video-files/6964012/6964012-hd_1920_1080_25fps.mp4",
+    "start": 1, "duration": 5.2, "crop_x": 0.2, "crop_y": 0.5
+  },
+  {
+    "name": "finish",
+    "page": "https://www.pexels.com/video/a-man-running-towards-the-finish-line-6265073/",
+    "creator": "Anna Shvets",
+    "download": "https://videos.pexels.com/video-files/6265073/6265073-hd_1080_1920_30fps.mp4",
+    "start": 3.05, "duration": 2.2, "speed": 0.65, "crop_x": 0.5, "crop_y": 0.3
+  },
+  {
+    "name": "sofa",
+    "page": "https://www.pexels.com/video/man-resting-on-sofa-with-laptop-4052822/",
+    "creator": "KATRIN BOLOVTSOVA",
+    "download": "https://videos.pexels.com/video-files/4052822/4052822-hd_1920_1080_25fps.mp4",
+    "start": 0.6, "duration": 3.4, "crop_x": 0, "crop_y": 0.5
+  },
+  {
+    "name": "developer",
+    "page": "https://www.pexels.com/video/a-man-busy-working-on-his-laptop-5495846/",
+    "creator": "Pavel Danilyuk",
+    "download": "https://videos.pexels.com/video-files/5495846/5495846-uhd_2560_1080_30fps.mp4",
+    "start": 3, "duration": 4.6, "crop_x": 0.65, "crop_y": 0.5
+  },
+  {
+    "name": "beach",
+    "page": "https://www.pexels.com/video/couple-relaxing-at-the-beach-4730991/",
+    "creator": "Naveen G",
+    "download": "https://videos.pexels.com/video-files/4730991/4730991-hd_1920_1080_25fps.mp4",
+    "start": 0.25, "duration": 1.4, "crop_x": 0.5, "crop_y": 0.5
+  }
+]

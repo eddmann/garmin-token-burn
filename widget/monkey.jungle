@@ -1,0 +1,4 @@
+project.manifest = manifest.xml
+project.typecheck = 1
+base.sourcePath = source;../shared/source
+base.resourcePath = resources;../shared/resources

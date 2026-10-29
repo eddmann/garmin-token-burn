@@ -1,0 +1,9 @@
+{
+  "alertPct": 50,
+  "show": ["codex", "claude", "gemini"],
+  "face": ["claude", "codex"],
+  "providers": {
+    "claude": {"short": "CL", "hide": ["claude-weekly-scoped-fable"]},
+    "codex": {"name": "OpenAI Codex", "color": "#AA00FF"}
+  }
+}
